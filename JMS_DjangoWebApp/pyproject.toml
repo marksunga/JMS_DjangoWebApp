@@ -1,2 +1,0 @@
-[tool.vercel]
-entrypoint = "JMS_DjangoWebApp.asgi:application"

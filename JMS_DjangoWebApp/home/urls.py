@@ -1,7 +1,7 @@
-from django.urls import path
-from . import views
+from django.contrib import admin
+from django.urls import path, include
 
 urlpatterns = [
-    path('', views.dynamic_form, name='home'),
-    path('dynamic-form/', views.dynamic_form, name='dynamic_form'),
+    path("admin/", admin.site.urls),        # ← THIS LINE WAS MISSING!
+    path("", include("your_app_name.urls")), # ← Replace "your_app_name" with your actual app folder name
 ]
